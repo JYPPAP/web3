@@ -1,0 +1,1004 @@
+@charset "utf-8";
+@import url(reset.css);
+
+/*********************
+    기본 설정
+*********************/
+// * { }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*********************
+    레이아웃
+*********************/
+.main {
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+}
+
+/* sidebar */
+.sidebar {
+  position: fixed;
+  right: 0;
+  width: 43px;
+  height: 100%;
+
+  .side_list {
+    width: 43px;
+    height: 148px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.center {
+  max-width: 1080px;
+  min-width: 360px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.banner {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.trade_title {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 20px;
+  padding-bottom: 3px;
+}
+
+.trade_select {
+  height: 40px;
+
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  .select_list {
+    float: left;
+
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+
+    height: 100%;
+
+    .select_item {
+      float: left;
+    }
+  }
+
+  .select_search {
+    float: right;
+  }
+}
+
+.subtitle {
+  height: 46px;
+  margin-top: 15px;
+  padding: 11px 0 8px;
+
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  span {
+    float: left;
+  }
+
+  .premium_regInfo {
+    float: right;
+  }
+
+  .basic_filter {
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+
+    .filter_item {
+      float: left;
+    }
+  }
+
+  .basic_refresh {
+    float: right;
+  }
+
+  .trade_info {
+    float: right;
+  }
+
+}
+
+.list {
+  width: 100%;
+
+  // height: 100%;
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+.item {
+  height: 60px;
+  display: block;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 13px;
+  letter-spacing: -1px;
+  &:last-child { margin-bottom: 0;}
+  @media (max-width: 1000px) {
+    .col1 { max-width: none; width: 11%;}
+    .col2 { max-width: none; width: 52%;}
+    .col3 { max-width: none; width: 12%;}
+    .col4 { max-width: none; width: 25%;}
+    .col5 { display: none; }
+  }
+  @media (max-width: 870px) {
+    .col1 { width: 12%;}
+    .col2 { width: 52%;}
+    .col3 { width: 18%;}
+    .col4 { width: 18%;}
+    .dn_text {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: pre;
+    }
+  }
+  @media (max-width: 600px) {
+    .col1 { width: 15%; letter-spacing: -3px;}
+    .col2 { width: calc(100% - 40% - 98px); letter-spacing: -1px;}
+    .col3 { width: 25%; letter-spacing: -1px;}
+    .col4 { width: 98px;}
+    .up_text { line-height: 30px;}
+    .dn_text {
+      display: none;
+    }
+  }
+  >* {
+    display: block;
+    float: left;
+    height: 100%;
+  }
+}
+
+.col1 {
+  max-width: 120px;
+  width: 11.1111%;
+  line-height: 60px;
+}
+
+.col2 {
+  max-width: 480px;
+  width: 44.4444%;
+  text-align-last: left;
+  // .up_text {
+  //   text-align: center;
+  // }
+}
+
+.col3 {
+  max-width: 140px;
+  width: 12.9629%;
+  text-align-last: right;
+  span {
+    line-height: 40px;
+    display: block;
+  }
+  span + span {
+    line-height: 0px;
+  }
+}
+
+.col4 {
+  max-width: 270px;
+  width: 25%;
+}
+
+.col5 {
+  max-width: 70px;
+  width: calc(100% - 93.5184%);
+  line-height: 60px;
+}
+
+.more_load {
+  margin: 0 auto;
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.top {
+  width: 100%;
+  height: 14px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.footer {
+  margin-top: 30px;
+  &_link {
+    position: relative;
+    height: 43px;
+    @media (max-width: 1000px) {
+      .link_list {
+        .link_item {
+          margin-right: 5px;
+        }
+      }
+    }
+    @media (max-width: 600px) {
+      .link_list {
+        .link_item {
+          margin-right: 0;
+        }
+      }
+    }
+    .link_list {
+      width: calc(100% - 110px);
+      @media (max-width: 1080px) {
+        width: 100%;
+      }
+      &:after {
+        content: '';
+        clear: both;
+        display: block;
+      }
+      .link_item {
+        display: inline-block;
+        margin-right: 35px;
+        &:last-child {margin-right: 0;}
+        @media (max-width: 1080px) {
+          letter-spacing: -1px;
+          margin-right: 5px;
+        }
+      }
+    }
+    .sns_logo {
+      position: absolute;
+      top: 0;
+      right: 16px;
+      display: inline-block;
+      height: 43px;
+      @media (max-width: 800px) {
+        top: 40px;
+        right: 16px;
+      }
+      @media (max-width: 450px) {
+        top: 80px;
+        right: 16px;
+      }
+      .sns {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        margin-right: 2px;
+        vertical-align: middle;
+      }
+    }
+  }
+  &_info {
+    height: 110px;
+    padding: 28px 0;
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+    .flogo {
+      border: 0;
+      width: 104px;
+      height: 31px;
+      display: inline-block;
+      vertical-align: middle;
+      @media (max-width: 680px) {
+        margin-top: 15px;
+      }
+    }
+    .copy {
+      margin-left: 40px;
+      line-height: 18px;
+      display: inline-block;
+      vertical-align: middle;
+      word-break: break-all;
+      span {
+        display: inline-block;
+      }
+    }
+    address { font-style: normal; display: inline-block;}
+  }
+}
+/*********************
+    공통 적용 클래스
+*********************/
+.icon{
+  display: inline-block;
+  background: url(../images/sp_icon_20210312.png) no-repeat;
+  &.user_info {
+    width: 28px;
+    height: 32px;
+    background-position: -32px -230px;
+  }
+  &.plus_zone {
+    width: 31px;
+    height: 27px;
+    background-position: -573px -230px;
+  }
+}
+.subtitle {
+  span {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #2f2f2f;
+  }
+}
+.list {
+  .item {
+    &:hover {
+      background-color: #e3f4fe;
+      .col2 .icon_detail { display: block;}
+    }
+    .col1 {
+      position: relative;
+    }
+    .col2{
+      position: relative;
+      padding: 15px 0;
+      .up_text {margin-bottom: 5px;}
+      .icon_detail {
+        position: absolute;
+        top: 14px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        background: url("../images/sp_list.png") no-repeat -2px -135px;
+        cursor: pointer;
+        display: none;
+      }
+    }
+    .col3{
+      .unit_money { color: #767676;}
+      .min_money { color: #216ed7; font-weight: bold;}
+    }
+    .col4{
+      position: relative;
+      .icon_wrap {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        i{
+          height: 41px;
+          background-image: url(../images/sp_list.png);
+          background-repeat: no-repeat;
+          background-position-y: -53px;
+          margin-top: 9px;
+          margin-right: 10px;
+          display: inline-block;
+          &.active {background-position-y: -2px;}
+        }
+        .cert {
+          width: 38px;
+          background-position-x: -2px;
+        }
+        .reward {
+          width: 43px;
+          background-position-x: -50px;
+        }
+        .sell_reward {
+          width: 63px;
+          background-position-x: -235px;
+        }
+        .sale {
+          width: 26px;
+          background-position-x: -103px;
+        }
+        @media (max-width: 920px) {
+          i {
+            /* 아이콘 관련 미디어쿼리 */
+            display: none;
+          }
+          i.active {
+            display: inline-block;
+            height: 24px;
+            margin: 0;
+            margin-top: 18px;
+            background-position-y: -104px;
+          }
+          .cert {
+            width: 18px;
+            background-position-x: -2px;
+          }
+          .reward {
+            width: 19px;
+            background-position-x: -27px;
+          }
+          .sell_reward {
+            width: 19px;
+            background-position-x: -260px;
+          }
+          .sale {
+            width: 26px;
+            background-position-x: -52px;
+          }
+        }
+      }
+    }
+    .col5 {color: #767676;}
+  }
+}
+.bl { color: #216ed7;}
+.bd { font-weight: bold;}
+.icon_quick {
+  position: absolute;
+  top: 17px;
+  right: 0;
+  width: 73px;
+  height: 27px;
+  background: url("../images/btn_quick.gif");
+  cursor: pointer;
+}
+/*********************
+    사이드바
+*********************/
+.sidebar {
+  @media (max-width: 1196px) {
+    display: none;
+  }
+
+  .side_list {
+    background: #919199;
+    .side_item {
+      position: relative;
+      border: 1px solid #a4a4a4;
+      border-right: none;
+      width: 43px;
+      
+      &:nth-child(1) {
+        height: 55px;
+      }
+
+      &:nth-child(2) {
+        height: 50px;
+        border-top: 0;
+      }
+      .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        text-align: center;
+      }
+    }
+    p {
+      color: #767676;
+      letter-spacing: -1px;
+      background: #fff;
+      display: block;
+      visibility: hidden;
+      width: 80px;
+      font-size: 12px;
+      text-align: center;
+      color: #767676;
+      padding: 10px 0;
+      position: relative;
+      left: -85px;
+      z-index: 1;
+      border: 1px solid #E0E0E0;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 10;
+        border: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        margin-top: -5px;
+        top: 50%;
+        border-left: 5px solid #fff;
+        left: auto;
+        right: -5px;
+      }
+    }
+    .icon:hover {
+      p {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+
+.to_top {
+  margin-top: 0;
+  width: 43px;
+  height: 43px;
+  background-color: #0475EA;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 6px 0;
+  cursor: pointer;
+  letter-spacing: -1px;
+
+  /* 화살표 */
+  .arrow_icon {
+    height: .9em;
+    display: block;
+    position: relative;
+    border-radius: 4px;
+    padding-top: 3px;
+    margin-top: 3px;
+
+    .left_bar {
+      position: absolute;
+      left: 17px;
+      height: 5px;
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      border-radius: 2px;
+
+      &:after {
+        content: '';
+        background-color: #fff;
+        width: 12px;
+        height: 1px;
+        display: block;
+        float: right;
+        border-radius: 6px 10px 10px 6px;
+      }
+    }
+
+    .right_bar {
+      position: absolute;
+      left: 12px;
+      height: 5px;
+      transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+
+      &:after {
+        content: '';
+        background-color: #fff;
+        width: 12px;
+        height: 1px;
+        display: block;
+        float: right;
+        border-radius: 10px 6px 6px 10px;
+      }
+    }
+  }
+}
+/*********************
+    배너
+*********************/
+.ban1 {
+  background: url(../images/20210623173646_9NDHw.jpg) no-repeat;
+}
+.ban2 {
+  background: url(../images/20210312164421_TGK5l.jpg) no-repeat;
+}
+.ban3 {
+  background: url(../images/20211012154232_DVKcz.jpg) no-repeat;
+}
+
+/*********************
+    거래 타이틀
+*********************/
+.trade_title {
+  border-bottom: 2px solid #159efd;
+  >span {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    text-align-last: left;
+    color: #159efd;
+    line-height: 30px;
+    margin-right: 15px;
+  }
+}
+#server_name {
+  font-size: 15px;
+  letter-spacing: -1px;
+  font-weight: 700;
+  text-align-last: left;
+  vertical-align: middle;
+  color: #1d1d1d;
+  padding-top: 4px;
+  margin-right: 15px;
+}
+#trade_reg {
+  float: right;
+  width: 98px;
+  height: 30px;
+  background: #159EFD;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+/*********************
+    거래 선택
+*********************/
+.trade_select {
+  border-bottom: 1px solid #e1e1e1;
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+  .select_list {
+    float: left;
+    width: 50%;
+    .select_item {
+      float: left;
+      max-width: 183px;
+      width: 33.3333%;
+      text-align: center;
+      color: #1d1d1d;
+      background: #f1f0f3;
+      height: 100%;
+      line-height: 38px;
+      border-top: 1px solid #e1e1e1;
+      border-right: 1px solid #e1e1e1;
+      &:first-child {
+        border-left: 1px solid #e1e1e1;
+      }
+    }
+  }
+  .select_search {
+    float: left;
+    width: 50%;
+  }
+  #trade_search {
+    float: right;
+    height: 29px;
+    max-width: 234px;
+    width: 100%;
+    border: 1px solid #d7d7d7;
+    border-right: 0;
+    padding: 0 5px;
+  }
+  .search_btn {
+    float: right;
+    width: 34px;
+    height: 29px;
+    display: block;
+    border: 1px solid #d7d7d7;
+    background-position: -44px -135px;
+    background-image: url(../images/sp_list.png);
+  }
+  @media (max-width: 600px) {
+    .select_list {
+      width: 80%;
+    }
+    .select_search {
+      width: 20%;
+      #trade_search {
+        display: none;
+      }
+    }
+  }
+}
+/*********************
+    프리미엄
+*********************/
+.premium {
+  position: relative;
+  &_regInfo {
+    position: absolute;
+    top: 11px;
+    right: 0;
+    width: 131px;
+    height: 29px;
+    font-size: 12px;
+    line-height: 27px;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    text-align: center;
+    font-weight: normal;
+    &:after {
+      margin-left: 5px;
+      content: "〉〉〉";
+      font-weight: bold;
+      letter-spacing: -5.5px;
+      color: #159efd;
+    }
+  }
+  >.item {
+    background: #f0f8fd;
+    box-shadow: 0px 0 0 1px #c3daea inset;
+    &:hover {
+      box-shadow: 0 0 0 2px #399fe7 inset;
+    }
+  }
+  .col1:before {
+    width: 44px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: url(../images/img_pre_tab.png);
+  }
+}
+/*********************
+    베이직
+*********************/
+.basic {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  &_filter {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 7px;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .filter_item {
+      float: left;
+      width: 33px;
+      height: 15px;
+      margin-left: 15px;
+      font-size: 11px;
+      color: #9f9f9f;
+      line-height: 20px;
+      &:before {
+        content: '';
+        width: 10px;
+        height: 9px;
+        display: inline-block;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        color: #1d1d1d;
+        &:before {
+          background: url("../images/sp_list.png") no-repeat -194px -104px;
+        }
+      }
+    }
+  }
+  // background: #ddd;
+  &_right {
+    float: right;
+  }
+  &_refresh {
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    background: url("../images/sp_list.png") no-repeat -238px -104px;
+  }
+  .trade_info {
+    float: left;
+    width: 66px;
+    font-size: 12px;
+    color: #2f2f2f;
+    font-weight: normal;
+    display: block;
+    @media (max-width: 450px) {
+      display: none;
+    }
+  }
+  .icon_hook {
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin: 0 10px 0 5px;
+    background: url("../images/sp_list.png") no-repeat -214px -104px;
+  }
+  .item {
+    border-bottom: 1px solid #E3E3E3;
+    &:hover {
+      background-color: #e3f4fe;
+    }
+  }
+}
+.header {
+  height: 40px;
+  text-align-last: none;
+  border-top: 1px solid #BEBEBE;
+  border-bottom: 1px solid #BEBEBE;
+  
+  >.item {
+    height: 100%;
+    line-height: 38px;
+    text-align: center;
+    color: #1D1D1D;
+    >* {
+      background-color: #e3e3e3;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+    /* 기존 값 초기화 */
+    .col1 { line-height: 38px;}
+    .col2 { padding: 0; text-align-last: center;}
+    .col3 { text-align-last: center;}
+    .col5 { line-height: 38px; color: #1D1D1D;}
+  }
+}
+
+.icon_hook {
+  position: relative;
+  &:hover {
+    .trade_info_detail {
+      visibility: visible;
+    }
+  }
+  .trade_info_detail {
+    visibility: hidden;
+    position: absolute;
+    top: 18px;
+    right: -5px;
+    @media (max-width: 600px) {
+      right: -35px;
+    }
+    box-sizing: border-box;
+    width: 364px;
+    height: 200px;
+    padding: 12px 15px 0;
+    border: 1px solid #707070;
+    background: #fff;
+    z-index: 1;
+    color: #636363;
+    p {
+      font-weight: bold;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+    .detail_close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 14px;
+      height: 13px;
+      background: url("../images/sp_list.png") no-repeat -170px -104px;
+      background-color: #000;
+    }
+  }
+}
+.detail_list {
+  font-weight: normal;
+  font-size: 11px;
+  .detail_item {
+    margin-bottom: 5px;
+    height: 32px;
+    width: 332px;
+    line-height: 30px;
+    letter-spacing: -1px;
+    span {
+      border: 1px solid #CFCFCF;
+      display: inline-block;
+      width: 103px;
+      height: 32px;
+      background-color: #f7f7f7;
+      border-radius: 3px;
+      text-align: center;
+      line-height: 30px;
+      margin-right: 10px;
+      font-size: 11px;
+      font-weight: normal;
+      i {
+        display: inline-block;
+        line-height: 30px;
+        height: 21px;
+        background-image: url(../images/sp_list.png);
+        background-position-y: -104px;
+        vertical-align: middle;
+        margin-top: -3px;
+        margin-right: 5px;
+      }
+    }
+    &:nth-child(1) i{
+      width: 15px;
+      background-position-x: -2px;
+    }
+    &:nth-child(2) i{
+      width: 17px;
+      background-position-x: -27px;
+    }
+    &:nth-child(3) i{
+      width: 21px;
+      background-position-x: -53px;
+    }
+    &:nth-child(4) i{
+      width: 18px;
+      background-position-x: -85px;
+    }
+  }
+}
+.more_load {
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  line-height: 46px;
+}
+.top img {
+  float: right;
+  cursor: pointer;
+}
+/*********************
+    footer
+*********************/
+.footer {
+  background: #616161;
+  color: #e1e1e1;
+  &_link {
+    border-bottom: 1px solid #767676;
+    line-height: 43px;
+    .link_list {
+      font-size: 13px;
+      .link_item {
+        &:nth-child(3) {
+          font-weight: bold;
+          color: #feffcf;
+        }
+        &:last-child {
+          display: inline-block;
+          img {
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .sns_logo {
+      .sns {
+        background-image: url(../images/sp_renew_20210804.png);
+        background-repeat: no-repeat;
+        background-position-x: -802px;
+      }
+      .facebook {
+        background-position-y: -2px;
+      }
+      .instagram {
+        background-position-y: -26px;
+      }
+      .youtube {
+        background-position-y: -50px;
+      }
+    }
+  }
+  &_info {
+    font-size: 12px;
+    color: #b0b0b0;
+  }
+}

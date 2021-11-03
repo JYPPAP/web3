@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이템매니아</title>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+  <header></header>
+  <div class="main">
+    <!-- 사이드바 -->
+    <nav class="sidebar">
+      <ul class="side_list">
+        <li class="side_item">
+          <span class="icon user_info">
+            <p>나의 거래정보</p>
+          </span>
+        </li>
+        <li class="side_item">
+          <div class="icon plus_zone">
+            <p>플러스존</p>
+          </div>
+        </li>
+        <li class="to_top">
+          <a href="javascript:;" class="arrow_icon">
+            <span class="left_bar"></span>
+            <span class="right_bar"></span>
+          </a>
+          TOP
+        </li>
+      </ul>
+    </nav>
+    <!-- 사이드바-end -->
+    <div class="center">
+      <div class="banner ban1"></div>
+      <div class="trade_title">
+        <span>팝니다</span>
+        <b id="server_name">로스트아크_서버전체</b>
+        <div id="trade_reg"><span>판매등록 +</span></div>
+      </div>
+      <div class="trade_select">
+        <ul class="select_list">
+          <li class="select_item">게임머니</li>
+          <li class="select_item">아이템</li>
+          <li class="select_item">기타</li>
+        </ul>
+        <div class="select_search">
+          <div class="search_btn"></div>
+          <input type="search" name="trade_search" id="trade_search" placeholder="물품제목">
+        </div>
+      </div>
+
+      <!-- premium -->
+      <div class="subtitle premium">
+        <span>프리미엄</span>
+        <div class="premium_regInfo">
+          프리미엄 등록안내
+        </div>
+      </div>
+      <ul class="list premium">
+        <!-- ∇ premium list 1 -->
+        <li class="item">
+          <div class="col1">루페온</div>
+          <div class="col2">
+            <p class="up_text bl">[3만~1,056만]</p>
+            <p class="dn_text bl">██████████골드★우편거래★접속중██████████</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1만당 8,500원</span>
+            <span class="min_money">최소 25,500원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert active"></i>
+              <i class="reward active"></i>
+              <i class="sell_reward active"></i>
+              <i class="sale active"></i>
+            </div>
+          </div>
+          <div class="col5">15:05</div>
+        </li>
+        <!-- ∆ premium list 1 -->
+        <!-- ∇ premium list 2 -->
+        <li class="item">
+          <div class="col1">루페온</div>
+          <div class="col2">
+            <p class="up_text bl">[2만4,000~99만]</p>
+            <p class="dn_text bl">██████████골드★우편거래★접속중██████████</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1,000당 850원</span>
+            <span class="min_money">최소 20,400원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert"></i>
+              <i class="reward"></i>
+              <i class="sell_reward"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:06</div>
+        </li>
+        <!-- ∆ premium list 2 -->
+        <!-- ∇ premium list 3 -->
+        <li class="item">
+          <div class="col1">루페온</div>
+          <div class="col2">
+            <p class="up_text bl">[2만2,000~99만]</p>
+            <p class="dn_text">█████▶　　최　저　가　　◀█████</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1,000당 950원</span>
+            <span class="min_money">최소 20,900원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert"></i>
+              <i class="reward"></i>
+              <i class="sell_reward"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:07</div>
+        </li>
+        <!-- ∆ premium list 3 -->
+        <!-- ∇ premium list 4 -->
+        <li class="item">
+          <div class="col1">루페온</div>
+          <div class="col2">
+            <p class="up_text bl">[2만2,000~99만]</p>
+            <p class="dn_text bl">█████▶　　최　저　가　　◀█████</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1,000당 950원</span>
+            <span class="min_money">최소 20,900원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert"></i>
+              <i class="reward"></i>
+              <i class="sell_reward"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:05</div>
+        </li>
+        <!-- ∆ premium list 4 -->
+        <!-- ∇ premium list 5 -->
+        <li class="item">
+          <div class="col1">루페온</div>
+          <div class="col2">
+            <p class="up_text bl bd">[1만8,000~99만]</p>
+            <p class="dn_text  bl bd">██████ 200%보상★1530본캐거래★1초즉시우편★칼응답 ██████</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">600당 650원</span>
+            <span class="min_money">최소 18,500원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert active"></i>
+              <i class="reward active"></i>
+              <i class="sell_reward"></i>
+              <i class="sale active"></i>
+            </div>
+          </div>
+          <div class="col5">03:32</div>
+        </li>
+        <!-- ∆ premium list 5 -->
+      </ul>
+
+      <div class="subtitle basic">
+        <span>물품리스트</span>
+        <ul class="basic_filter">
+          <li class="filter_item active">전체</li>
+          <li class="filter_item">일반</li>
+          <li class="filter_item">분할</li>
+          <li class="filter_item">흥정</li>
+        </ul>
+        <div class="basic_right">
+          <span class="trade_info">물품정보안내</span>
+          <div class="icon_hook">
+            <div class="trade_info_detail">
+              <p>물품정보안내란?</p>
+              <ul class="detail_list">
+                <li class="detail_item"><span class="mark"><i class="trade_icon"></i>우수인증</span>휴대폰, 이메일, 출금계좌가 모두 인증된 회원</li>
+                <li class="detail_item"><span class="mark"><i class="trade_icon"></i>200% 보상</span>거래사고 시 판매자가 200% 보상하는 물품</li>
+                <li class="detail_item"><span class="mark"><i class="trade_icon"></i>할인</span>할인가가 적용된 판매자 상품</li>
+                <li class="detail_item"><span class="mark"><i class="trade_icon"></i>흥정</span>구매자의 흥정신청이 가능한 물품</li>
+              </ul>
+              <div class="detail_close"></div>
+            </div>
+          </div>
+          <div class="basic_refresh"></div>
+
+        </div>
+      </div>
+      <ul class="list header">
+        <li class="item">
+          <div class="col1">서버종류</div>
+          <div class="col2">물품제목</div>
+          <div class="col3">판매금액</div>
+          <div class="col4">물품정보</div>
+          <div class="col5">등록시간</div>
+        </li>
+      </ul>
+      <ul class="list basic">
+        <!-- ∇ basic item 1 -->
+        <li class="item">
+          <div class="col1">니나브</div>
+          <div class="col2">
+            <p class="up_text">[2만~99만]</p>
+            <p class="dn_text">█████▶　　최　저　가　　◀█████</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1,000당 1,000원</span>
+            <span class="min_money">최소 20,000원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert"></i>
+              <i class="reward"></i>
+              <i class="sell_reward"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:07</div>
+        </li>
+        <!-- ∆ basic item 1 -->
+        <!-- ∇ basic item 2 -->
+        <li class="item">
+          <div class="col1">아만</div>
+          <div class="col2">
+            <div class="up_text">[3만5,000~90만]</div>
+            <div class="dn_text bl">■ ▨ ■ 우편거래★특급배송 ■ ▨</div>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1,000당 940원</span>
+            <span class="min_money">최소 32,900원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert"></i>
+              <i class="reward"></i>
+              <i class="sell_reward"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:07</div>
+        </li>
+        <!-- ∆ basic item 2 -->
+        <!-- ∇ basic item 3 -->
+        <li class="item">
+          <div class="col1">카마인</div>
+          <div class="col2">
+            <p class="up_text">[2만5,000~99만9,999]</p>
+            <p class="dn_text">★즉시우편★ 원정대300 ★ 개인 안전 골드팝니다.</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1,000당 820원</span>
+            <span class="min_money">최소 20,500원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert active"></i>
+              <i class="reward"></i>
+              <i class="sell_reward active"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:07</div>
+        </li>
+        <!-- ∆ basic item 3 -->
+        <!-- ∇ basic item 4 -->
+        <li class="item">
+          <div class="col1">실리안</div>
+          <div class="col2">
+            <p class="up_text">[3만5,000~90만]</p>
+            <p class="dn_text bl bd">■ ▨ ■ 우편거래★특급배송 ■ ▨ ■</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1,000당 940원</span>
+            <span class="min_money">최소 32,900원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert"></i>
+              <i class="reward"></i>
+              <i class="sell_reward"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:07</div>
+        </li>
+        <!-- ∆ basic item 4 -->
+        <!-- ∇ basic item 5 -->
+        <li class="item">
+          <div class="col1">카단</div>
+          <div class="col2">
+            <p class="up_text">[2만~99만]</p>
+            <p class="dn_text">█████▶　　최　저　가　　◀█████</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1,000당 1,000원</span>
+            <span class="min_money">최소 20,000원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert"></i>
+              <i class="reward"></i>
+              <i class="sell_reward"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:07</div>
+        </li>
+        <!-- ∆ basic item 5 -->
+        <!-- ∇ basic item 6 -->
+        <li class="item">
+          <div class="col1">아브렐슈드</div>
+          <div class="col2">
+            <p class="up_text">[1개~99개]</p>
+            <p class="dn_text">████◘ 3600 크리스탈 선물식 ◘███████████████████</p>
+            <div class="icon_quick"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1개당 108,000원</span>
+            <span class="min_money">최소 108,000원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert"></i>
+              <i class="reward"></i>
+              <i class="sell_reward"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:07</div>
+        </li>
+        <!-- ∆ basic item 6 -->
+        <!-- ∇ basic item 7 -->
+        <li class="item">
+          <div class="col1">카단</div>
+          <div class="col2">
+            <p class="up_text">[3만5,000~90만]</p>
+            <p class="dn_text">■ ▨ ■ 우편거래★특급배송 ■ ▨ ■</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1,000당 900원</span>
+            <span class="min_money">최소 31,500원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert"></i>
+              <i class="reward"></i>
+              <i class="sell_reward"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:07</div>
+        </li>
+        <!-- ∆ basic item 7 -->
+        <!-- ∇ basic item 8 -->
+        <li class="item">
+          <div class="col1">카단</div>
+          <div class="col2">
+            <p class="up_text">[1만~31만]</p>
+            <p class="dn_text">❎ 접 속 중 ❎ 안 전 한 배 럭 골 드 ⭐ 신 속 우 편 거 래</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">500당 770원</span>
+            <span class="min_money">최소 15,400원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert active"></i>
+              <i class="reward active"></i>
+              <i class="sell_reward"></i>
+              <i class="sale active"></i>
+            </div>
+          </div>
+          <div class="col5">15:07</div>
+        </li>
+        <!-- ∆ basic item 8 -->
+        <!-- ∇ basic item 9 -->
+        <li class="item">
+          <div class="col1">실리안</div>
+          <div class="col2">
+            <p class="up_text">[8만]</p>
+            <p class="dn_text">ㅂ 8만 골드 팝니다 ㅂ</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1만당 15,625원</span>
+            <span class="min_money">125,000원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert active"></i>
+              <i class="reward active"></i>
+              <i class="sell_reward"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:07</div>
+        </li>
+        <!-- ∆ basic item 9 -->
+        <!-- ∇ basic item 10 -->
+        <li class="item">
+          <div class="col1">카마인</div>
+          <div class="col2">
+            <p class="up_text">[2만4,000~99만]</p>
+            <p class="dn_text">██████████골드★우편거래★접속중██████████</p>
+            <div class="icon_detail"></div>
+          </div>
+          <div class="col3">
+            <span class="unit_money">1,000당 850원</span>
+            <span class="min_money">최소 20,400원</span>
+          </div>
+          <div class="col4">
+            <div class="icon_wrap">
+              <i class="cert"></i>
+              <i class="reward"></i>
+              <i class="sell_reward"></i>
+              <i class="sale"></i>
+            </div>
+          </div>
+          <div class="col5">15:07</div>
+        </li>
+        <!-- ∆ basic item 10 -->
+      </ul>
+      <div class="more_load">+ 50개 더보기</div>
+
+      <div class="top"><img src="images/btn_top.gif" alt="위로가기"></div>
+      <div class="banner ban2"></div>
+      <div class="banner ban3"></div>
+    </div>
+    <!-- ∆ center -->
+  </div>
+  <!-- ∆ main -->
+
+  <footer class="footer">
+    <div class="footer_link center">
+      <ul class="link_list">
+        <li class="link_item"><a href="javascript:;">회사소개</a></li>
+        <li class="link_item"><a href="javascript:;">이용약관</a></li>
+        <li class="link_item"><a href="javascript:;">개인정보 처리방침</a></li>
+        <li class="link_item"><a href="javascript:;">청소년 보호정책</a></li>
+        <li class="link_item"><a href="javascript:;">이메일 수집거부</a></li>
+        <li class="link_item"><a href="javascript:;">채용안내</a></li>
+        <li class="link_item"><a href="javascript:;">제휴문의</a></li>
+        <li class="link_item"><a href="javascript:;">고객센터</a></li>
+        <li class="link_item"><a href="javascript:;"><img src="images/경찰청 사이버안전국.png" alt="police"></a></li>
+      </ul>
+      <ul class="sns_logo">
+        <li class="sns facebook"></li>
+        <li class="sns instagram"></li>
+        <li class="sns youtube"></li>
+      </ul>
+    </div>
+    <hr>
+    <div class="footer_info center">
+      <div class="flogo"><img src="images/IMI.png" alt="IMI"></div>
+      <div class="copy"><span>IMI(주)아이엠아이</span> <span>대표이사:박수종</span> <address>전주시 덕진구 가리내로 56 아이엠아이빌딩</address> <span>통신판매업신고번호:제 2002-전주덕진-0015호</span>
+        <br>
+        <span>사업자등록번호:402-81-50705</span> <span>고객센터:1544-8278</span> <span>Fax:0505-247-8278</span> <span>Copyright ⓒ IMI. All rights reserved.</span>
+        <br>
+        <p>아이템매니아는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 아이템매니아는 상품 거래정보 및 거래에 대하여 책임을 지지 않습니다.</p></div>
+      <div class="inipay"></div>
+    </div>
+  </footer>
+</body>
+
+</html>
