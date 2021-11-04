@@ -1,3 +1,13 @@
+21.11.04-3
+해야할 일
+1. IE에서 물품정보안내 우측에 ?에 마우스를 올렸을 때 뒤쪽의 아이콘이나 글자가 위로 올라감
+  > IE에서 visibility:hidden, visibility: visible로 제어하니 생긴 문제로 display:none, display:block 처리하니 정상작동.
+
+2. IE에서 li 태그에 list-style이 disk 상태로 존재함
+  > li 태그도 reset.css에 추가.
+
+3. footer에 sns 로고가 760일 때 겹쳐서 미디어쿼리를 780으로 수정.
+
 21.11.04-2
 
 1. 배너가 화면을 축소해도 전부 보일 수 있도록 만들기

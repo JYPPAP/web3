@@ -245,9 +245,6 @@ a {
       .link_list .link_item {
         margin-right: 5px;
       }
-      .sns_logo {
-        // top: 42px;
-      }
     }
     .footer_info {
       padding: 0 10px;
@@ -260,14 +257,14 @@ a {
         display: block;
         text-align: left;
         width: 84%;
-        word-wrap: wrap;
+        word-break: keep-all;
       }
     }
   }
   @media (max-width: 900px) {
     height: 250px;
   }
-  @media (max-width: 760px) {
+  @media (max-width: 780px) {
     .footer_link {
       height: 86px;
       .sns_logo { top: 82px;}
@@ -526,18 +523,17 @@ a {
       }
     }
     p {
-      color: #767676;
+      width: 88px;
+      height: 28px;
       letter-spacing: -1px;
       background: #fff;
-      display: block;
       visibility: hidden;
-      width: 80px;
-      font-size: 12px;
+      font-size: 13px;
       text-align: center;
       color: #767676;
-      padding: 10px 0;
+      padding: 6px 5px;
       position: relative;
-      left: -85px;
+      left: -90px;
       z-index: 1;
       border: 1px solid #E0E0E0;
 
@@ -549,11 +545,11 @@ a {
         border: 0;
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
-        margin-top: -5px;
+        margin-top: -7px;
         top: 50%;
-        border-left: 5px solid #fff;
+        border-left: 12px solid #fff;
         left: auto;
-        right: -5px;
+        right: -10px;
       }
     }
     .icon:hover {
@@ -767,6 +763,8 @@ a {
     @media (max-width: 780px) {
       height: auto;
       >* { border-bottom: 0; text-align: center;}
+      .col2 { border-right: 1px solid #c3daea;}
+      .col3 { border-left: 1px solid c3daea;}
       .col3, .col4, .col5 {
         border-top: 0;
         border-bottom: 1px solid #c3daea;
@@ -781,10 +779,6 @@ a {
         .col1, .col2 { border-top: 2px solid #399fe7;}
         .col3, .col4, .col5 { border-bottom: 2px solid #399fe7;}
       }
-      // border-top: 2px inset #399fe7;
-      // border-bottom: 2px solid #399fe7;
-      // .col1 { border-left: 2px inset #399fe7;}
-      // .col5 { border-right: 2px inset #399fe7;}
     }
   }
   .col1:before {
@@ -842,7 +836,6 @@ a {
       }
     }
   }
-  // background: #ddd;
   &_right {
     float: right;
     margin-top: 10px;
@@ -927,11 +920,11 @@ a {
   position: relative;
   &:hover {
     .trade_info_detail {
-      visibility: visible;
+      display: block;
     }
   }
   .trade_info_detail {
-    visibility: hidden;
+    display: none;
     position: absolute;
     top: 18px;
     right: -5px;
