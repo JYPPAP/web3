@@ -97,15 +97,15 @@
   text-align: center;
   font-size: 13px;
   letter-spacing: -1px;
-  white-space: nowrap;
+  // white-space: nowrap;
   >* { float: left; height: 100%;}
   &:last-child { margin-bottom: 0;}
   /* TEST */
-  .col1 { background-color: rgb(200, 100, 100); }
-  .col2 { background-color: rgb(200, 200, 100); }
-  .col3 { background-color: rgb(100, 200, 100); }
-  .col4 { background-color: rgb(100, 100, 200); }
-  .col5 { background-color: rgb(200, 100, 200); }
+  .col1 { background-color: rgb(200, 100, 100) !important; }
+  .col2 { background-color: rgb(200, 200, 100) !important; }
+  .col3 { background-color: rgb(100, 200, 100) !important; }
+  .col4 { background-color: rgb(100, 100, 200) !important; }
+  .col5 { background-color: rgb(200, 100, 200) !important; }
   * { color: #000 !important;}
   @media (max-width: 1080px) {
     .col1 { max-width: none; width: 8%;}
@@ -117,7 +117,7 @@
   @media (max-width: 780px) {
     height: 80px !important;
     >* { float: none; position: absolute; height: 40px !important;}
-    .col1 { width: 30%; top: 0; left: 0; line-height: 30px;}
+    .col1 { width: 30%; top: 0; left: 0; }
     .col2 { width: 100%; top: 40px; padding: 0 !important; }
     .col3 { width: 30%; top: 0; left: 20%; span { line-height: 20px;} span + span { line-height: 1;}}
     .col4 { width: 40%; top: 0; left: 50%;}
@@ -143,8 +143,16 @@
 .col1 {
   max-width: 120px;
   width: 11.1111%;
-  line-height: 60px;
   cursor: pointer;
+  word-break: break-all;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    margin-right: 0;
+    vertical-align: middle;
+  }
 }
 
 .col2 {
@@ -334,7 +342,7 @@
       background-color: #e3f4fe;
       .col2 .icon_detail { display: block;}
     }
-    .col1 { white-space: nowrap;}
+    // .col1 { line-height: 1px;}
     .col2{
       position: relative;
       padding: 15px 0;
