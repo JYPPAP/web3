@@ -118,8 +118,10 @@
     height: 80px !important;
     >* { float: none; position: absolute; height: 40px !important;}
     .col1 { width: 30%; top: 0; left: 0; }
-    .col2 { width: 100%; top: 40px; padding: 0 !important; }
-    .col3 { width: 30%; top: 0; left: 20%; span { line-height: 20px;} span + span { line-height: 1;}}
+    .col2 { width: 100%; top: 40px;}
+    .col3 { width: 30%; top: 0; left: 20%;
+      span { line-height: 20px;}
+      span + span { line-height: 1;}}
     .col4 { width: 40%; top: 0; left: 50%;}
     .col5 { width: 0%; display: none;}
     .dn_text {
@@ -127,64 +129,14 @@
       overflow: hidden;
       white-space: nowrap;
     }
-    // .col1 { width: 20%;}
-    // .col2 { width: 80%;}
-    // .col3 { width: 26%;}
-    // .col4 { width: 66%;}
-    // .col5 { width: 8%;}
-    // .dn_text {
-    //   text-overflow: ellipsis;
-    //   overflow: hidden;
-    //   white-space: nowrap;
-    // }
   }
 }
 
-.col1 {
-  max-width: 120px;
-  width: 11.1111%;
-  cursor: pointer;
-  word-break: break-all;
-  &:after {
-    content: '';
-    display: inline-block;
-    width: 1px;
-    height: 100%;
-    margin-right: 0;
-    vertical-align: middle;
-  }
-}
-
-.col2 {
-  max-width: 480px;
-  width: 44.4444%;
-  text-align: left;
-  >* {cursor: pointer;}
-}
-
-.col3 {
-  max-width: 140px;
-  width: 12.9629%;
-  text-align: right;
-  span {
-    line-height: 40px;
-    display: block;
-  }
-  span + span {
-    line-height: 0px;
-  }
-}
-
-.col4 {
-  max-width: 270px;
-  width: 25%;
-}
-
-.col5 {
-  max-width: 70px;
-  width: calc(100% - 93.5184%);
-  line-height: 60px;
-}
+.col1 { max-width: 120px; width: 11.1111%;}
+.col2 { max-width: 480px; width: 44.4444%;}
+.col3 { max-width: 140px; width: 12.9629%;}
+.col4 { max-width: 270px; width: 25%;}
+.col5 { max-width: 70px; width: calc(100% - 93.5184%);}
 
 .more_load {
   margin: 0 auto;
@@ -342,10 +294,33 @@
       background-color: #e3f4fe;
       .col2 .icon_detail { display: block;}
     }
-    // .col1 { line-height: 1px;}
+    .col1 {
+      cursor: pointer;
+      
+      // 여기에 텍스트 수직정렬할 방법 추가 필요.
+      // 텍스트는 여러줄이 되어도 떨어지면 안됨.
+      // 아예 새로운 태그로 감싸는 방향으로 제작해보기.
+      span {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        word-break: break-all;
+      }
+      // &:after {
+      //   content: '';
+      //   display: inline-block;
+      //   width: 1px;
+      //   height: 100%;
+      //   margin-right: 0;
+      //   vertical-align: middle;
+      // }
+    }
     .col2{
       position: relative;
-      padding: 15px 0;
+      padding: 15px 5px;
+      text-align: left;
+      >* {cursor: pointer;}
       .up_text {margin-bottom: 5px;}
       .icon_detail {
         position: absolute;
@@ -359,15 +334,22 @@
       }
     }
     .col3{
+      text-align: right;
+      padding-right: 5px;
+      span {
+        line-height: 40px;
+        display: block;
+      }
+      span + span {
+        line-height: 0px;
+      }
       .unit_money { color: #767676;}
       .min_money { color: #216ed7; font-weight: bold;}
     }
     .col4{
-      // position: relative;
       .icon_wrap {
         width: 100%;
         height: 100%;
-        // position: relative;
         i{
           height: 41px;
           background-image: url(../images/sp_list.png);
@@ -396,7 +378,10 @@
         }
       }
     }
-    .col5 {color: #767676;}
+    .col5 {
+      color: #767676;
+      line-height: 60px;
+    }
   }
 }
 .bl { color: #216ed7;}
@@ -741,6 +726,9 @@
       color: #9f9f9f;
       line-height: 25px;
       cursor: pointer;
+      @media (max-width: 450px) {
+        margin-left: 0px;
+      }
       &:before {
         content: '';
         width: 10px;
@@ -777,9 +765,6 @@
     color: #2f2f2f;
     font-weight: normal;
     display: block;
-    @media (max-width: 450px) {
-      display: none;
-    }
   }
   .icon_hook {
     float: left;
@@ -824,7 +809,7 @@
       background-color: transparent;
     }
     /* 기존 값 초기화 */
-    .col1 { line-height: 38px;}
+    // .col1 { line-height: 38px;}
     .col2 { padding: 0; text-align: center;}
     .col3 { text-align: center;}
     .col5 { line-height: 38px; color: #1D1D1D;}
