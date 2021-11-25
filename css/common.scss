@@ -9,16 +9,13 @@
   padding-top: 30px;
 }
 
-/* sidebar */
 .sidebar {
   position: fixed;
   right: 0;
   width: 43px;
   height: 100%;
 
-  @media (max-width: 1196px) {
-    display: none;
-  }
+  @media (max-width: 1196px) { display: none;}
 }
 
 .center {
@@ -38,11 +35,6 @@
   }
 }
 
-.list {
-  width: 100%;
-  max-width: 1080px;
-}
-
 .footer {
   margin-top: 50px;
 
@@ -52,115 +44,6 @@
 
   @media (max-width: 900px) {
     height: 250px;
-  }
-
-  @media (max-width: 780px) {
-    .footer_link {
-      height: 86px;
-
-      .sns_logo {
-        top: 82px;
-      }
-    }
-  }
-
-  @media (max-width: 580px) {
-    height: 350px;
-
-    .footer_link .sns_logo {
-      top: 100px;
-      right: 0;
-    }
-
-    .footer_info {
-      .copy {
-        margin: 0;
-        margin-top: 10px;
-      }
-
-      .inipay {
-        top: 40px;
-        right: 13px;
-      }
-    }
-  }
-
-  &_link {
-    position: relative;
-    height: 43px;
-
-    .link_list {
-      width: 100%;
-
-      &:after {
-        display: block;
-        clear: both;
-        content: '';
-      }
-
-      .link_item {
-        float: left;
-        margin-right: 35px;
-        letter-spacing: -1px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-
-    .sns_logo {
-      position: absolute;
-      top: 0;
-      right: 16px;
-      display: inline-block;
-      height: 43px;
-
-      .sns {
-        display: inline-block;
-        width: 22px;
-        height: 22px;
-        margin-right: 2px;
-        vertical-align: middle;
-      }
-    }
-  }
-
-  hr {
-    height: 0px;
-    border: 0;
-    border-bottom: 1px solid #767676;
-  }
-
-  &_info {
-    height: 110px;
-    padding: 28px 0;
-
-    .footer_logo {
-      display: inline-block;
-      width: 104px;
-      height: 31px;
-      vertical-align: middle;
-      border: 0;
-
-    }
-
-    .copy {
-      display: inline-block;
-      margin-left: 40px;
-      line-height: 18px;
-      word-break: break-all;
-      vertical-align: middle;
-
-      span {
-        display: inline-block;
-      }
-    }
-
-    address {
-      display: inline-block;
-      font-style: normal;
-    }
   }
 }
 
@@ -206,6 +89,9 @@
 }
 
 .list {
+  width: 100%;
+  max-width: 1080px;
+
   .item {
     position: relative;
     display: block;
@@ -255,7 +141,6 @@
       .col1 {
         width: 30%;
         line-height: 40px;
-
       }
 
       .col2 {
@@ -276,8 +161,8 @@
         }
 
         .icon_detail {
-          top: 0 !important;
-          left: 50% !important;
+          top: 0;
+          left: 50%;
         }
       }
 
@@ -285,7 +170,7 @@
         width: 30%;
 
         span {
-          line-height: 20px !important;
+          line-height: 20px;
         }
 
         span+span {
@@ -297,8 +182,8 @@
         width: 40%;
 
         .icon_wrap i {
-          margin-top: 3px !important;
-          margin-right: 5px !important;
+          margin-top: 3px;
+          margin-right: 5px;
         }
       }
 
@@ -309,7 +194,6 @@
 
     @media (max-width: 510px) {
 
-      // .col1 { line-height: 10p}
       .col1,
       .col2 {
         width: 50%;
@@ -481,7 +365,6 @@
   cursor: pointer;
   background-color: #0475EA;
 
-  /* 화살표 */
   .arrow_icon {
     position: relative;
     display: block;
@@ -565,10 +448,8 @@
       margin: auto;
       text-align: center;
 
-      &:hover {
-        p {
-          visibility: visible;
-        }
+      &:hover p {
+        visibility: visible;
       }
     }
 
@@ -576,6 +457,7 @@
       position: relative;
       left: -90px;
       z-index: 1;
+      display: block;
       width: 88px;
       height: 28px;
       padding: 6px 5px;
@@ -771,25 +653,9 @@
     background: #F0F8FD;
     border: 1px solid #c3daea;
 
-    @media (max-width: 780px) {
-      // .col2 { border-right: 1px solid #c3daea;}
-      // .col3 { border-left: 1px solid #c3daea;}
-      // .col3, .col4, .col5 {
-      //   border-top: 0;
-      //   border-bottom: 1px solid #c3daea;
-      //   margin-bottom: 5px;
-      // }
-    }
-
     &:hover {
       background: #E3F4FE;
       box-shadow: 0 0 0 2px #399fe7 inset;
-
-      @media (max-width: 780px) {
-        // box-shadow: none;
-        // .col1, .col2 { border-top: 2px solid #399fe7;}
-        // .col3, .col4, .col5 { border-bottom: 2px solid #399fe7;}
-      }
     }
   }
 
@@ -913,7 +779,6 @@
     }
 
     /* 기존 값 초기화 */
-    // .col1 { line-height: 38px;}
     .col2 {
       padding: 0;
       text-align: center;
@@ -933,10 +798,8 @@
 .icon_hook {
   position: relative;
 
-  &:hover {
-    .trade_info_detail {
-      display: block;
-    }
+  &:hover .trade_info_detail {
+    display: block;
   }
 
   .trade_info_detail {
@@ -951,7 +814,6 @@
     color: #636363;
     background: #fff;
     border: 1px solid #707070;
-
     box-sizing: border-box;
 
     @media (max-width: 600px) {
@@ -1037,21 +899,19 @@
 .more_load {
   width: 100%;
   height: 48px;
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 20 auto 0;
   font-size: 14px;
   line-height: 46px;
   text-align: center;
   cursor: pointer;
   border: 1px solid #e0e0e0;
 }
- 
+
 .top {
   position: relative;
   width: 100%;
   height: 14px;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin: 20px 0 40px;
 
   img {
     float: right;
@@ -1065,16 +925,57 @@
 .footer {
   color: #e1e1e1;
   background: #616161;
+  @media (max-width: 580px) {
+    height: 350px;
+
+    .footer_link .sns_logo {
+      top: 100px;
+      right: 0;
+    }
+
+    .footer_info {
+      .copy {
+        margin: 0;
+        margin-top: 10px;
+      }
+
+      .iniPay {
+        top: 40px;
+        right: 13px;
+      }
+    }
+  }
 
   &_link {
+    position: relative;
+    height: 43px;
     padding: 0 10px;
     font-size: 13px;
     line-height: 43px;
     letter-spacing: 0;
 
+    @media (max-width: 780px) {
+      height: 86px;
+
+      .sns_logo {
+        top: 82px;
+      }
+    }
+
     .link_list {
+      width: 100%;
+
+      &:after {
+        display: block;
+        clear: both;
+        content: '';
+      }
+
       .link_item {
-        margin-right: 5px;
+        float: left;
+        margin-right: 35px;
+        // margin-right: 5px;
+        letter-spacing: -1px;
 
         &:nth-child(3) {
           font-weight: bold;
@@ -1083,6 +984,7 @@
 
         &:last-child {
           display: inline-block;
+          margin-right: 0;
 
           img {
             vertical-align: middle;
@@ -1092,52 +994,75 @@
     }
 
     .sns_logo {
+      position: absolute;
+      top: 0;
+      right: 16px;
+      display: block;
+      height: 43px;
+
       .sns {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        margin-right: 2px;
+        vertical-align: middle;
         cursor: pointer;
         background-image: url(../images/sp_renew_20210804.png);
         background-repeat: no-repeat;
         background-position-x: -802px;
       }
 
-      .facebook {
-        background-position-y: -2px;
-      }
-
-      .instagram {
-        background-position-y: -26px;
-      }
-
-      .youtube {
-        background-position-y: -50px;
-      }
+      .facebook { background-position-y: -2px;}
+      .instagram { background-position-y: -26px;}
+      .youtube { background-position-y: -50px;}
     }
+  }
+
+  hr {
+    height: 0px;
+    border: 0;
+    border-bottom: 1px solid #767676;
   }
 
   &_info {
     position: relative;
+    height: 110px;
     padding: 0 10px;
     margin-top: 20px;
     font-size: 12px;
     color: #b0b0b0;
 
     .footer_logo {
-      display: block;
-      margin: 0 auto;
+      display: inline-block;
+      width: 104px;
+      height: 31px;
+      vertical-align: middle;
+      border: 0;
 
       img {
-        width: 54px;
-        height: 54px;
         cursor: pointer;
       }
 
       .copy {
-        display: block;
+        display: inline-block;
         width: 84%;
+        margin-left: 40px;
+        line-height: 18px;
         text-align: left;
-        word-break: keep-all;
+        word-break: break-all;
+        vertical-align: middle;
+
+        span {
+          display: inline-block;
+        }
       }
 
-      .inipay {
+      address {
+        display: inline-block;
+        font-style: normal;
+      }
+
+      .iniPay {
         position: absolute;
         top: 23px;
         right: 30px;
@@ -1145,7 +1070,5 @@
         height: 54px;
       }
     }
-
   }
-
 }
