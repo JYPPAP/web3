@@ -22,9 +22,9 @@
 }
 
 .center {
+  width: 100%;
   max-width: 1080px;
   min-width: 360px;
-  width: 100%;
   margin: 0 auto;
 }
 
@@ -39,8 +39,8 @@
 }
 
 .list {
-  max-width: 1080px;
   width: 100%;
+  max-width: 1080px;
 }
 
 .footer {
@@ -48,8 +48,6 @@
 
   @media (max-width: 1040px) {
     height: 200px;
-
-    .footer_info {}
   }
 
   @media (max-width: 900px) {
@@ -95,9 +93,9 @@
       width: 100%;
 
       &:after {
-        content: '';
-        clear: both;
         display: block;
+        clear: both;
+        content: '';
       }
 
       .link_item {
@@ -129,9 +127,9 @@
   }
 
   hr {
+    height: 0px;
     border: 0;
     border-bottom: 1px solid #767676;
-    height: 0px;
   }
 
   &_info {
@@ -139,20 +137,20 @@
     padding: 28px 0;
 
     .footer_logo {
-      border: 0;
+      display: inline-block;
       width: 104px;
       height: 31px;
-      display: inline-block;
       vertical-align: middle;
+      border: 0;
 
     }
 
     .copy {
+      display: inline-block;
       margin-left: 40px;
       line-height: 18px;
-      display: inline-block;
-      vertical-align: middle;
       word-break: break-all;
+      vertical-align: middle;
 
       span {
         display: inline-block;
@@ -160,8 +158,8 @@
     }
 
     address {
-      font-style: normal;
       display: inline-block;
+      font-style: normal;
     }
   }
 }
@@ -171,8 +169,8 @@
 *********************/
 .icon {
   display: inline-block;
-  background: url(../images/sp_icon_20210312.png) no-repeat;
   cursor: pointer;
+  background: url(../images/sp_icon_20210312.png) no-repeat;
 
   &.user_info {
     width: 28px;
@@ -189,13 +187,13 @@
 
 .subtitle {
   height: 46px;
-  margin-top: 15px;
   padding: 11px 0 8px;
+  margin-top: 15px;
 
   &:after {
-    content: '';
-    clear: both;
     display: block;
+    clear: both;
+    content: '';
   }
 
   span {
@@ -210,143 +208,14 @@
 .list {
   .item {
     position: relative;
-    height: 60px;
     display: block;
-    max-width: 1080px;
     width: 100%;
+    height: 60px;
+    max-width: 1080px;
     margin: 0 auto;
-    text-align: center;
     font-size: 13px;
     letter-spacing: -1px;
-
-    &:hover {
-      background-color: #e3f4fe;
-
-      .col2 .icon_detail {
-        display: block;
-      }
-    }
-
-    >* {
-      float: left;
-      height: 100%;
-    }
-
-    .col1 {
-      max-width: 120px;
-      width: 11.1111%;
-      cursor: pointer;
-
-      span {
-        width: 100%;
-        line-height: 60px;
-        display: inline-block;
-        word-break: break-all;
-      }
-    }
-
-    .col2 {
-      position: relative;
-      max-width: 480px;
-      width: 44.4444%;
-      padding: 15px 5px;
-      text-align: left;
-
-      >* {
-        cursor: pointer;
-      }
-
-      .up_text {
-        margin-bottom: 5px;
-      }
-
-      .icon_detail {
-        position: absolute;
-        top: 14px;
-        right: 10px;
-        width: 32px;
-        height: 32px;
-        background: url("../images/sp_list.png") no-repeat -2px -135px;
-        cursor: pointer;
-        display: none;
-      }
-    }
-
-    .col3 {
-      max-width: 140px;
-      width: 12.9629%;
-      text-align: right;
-      padding-right: 5px;
-
-      span {
-        line-height: 40px;
-        display: block;
-      }
-
-      span+span {
-        line-height: 0px;
-      }
-
-      .unit_money {
-        color: #767676;
-      }
-
-      .min_money {
-        color: #216ed7;
-        font-weight: bold;
-      }
-    }
-
-    .col4 {
-      max-width: 270px;
-      width: 25%;
-
-      .icon_wrap {
-        width: 100%;
-        height: 100%;
-
-        i {
-          height: 41px;
-          background-image: url(../images/sp_list.png);
-          background-repeat: no-repeat;
-          background-position-y: -53px;
-          margin-top: 9px;
-          margin-right: 10px;
-          display: inline-block;
-
-          &.active {
-            background-position-y: -2px;
-          }
-        }
-
-        .cert {
-          width: 38px;
-          background-position-x: -2px;
-        }
-
-        .reward {
-          width: 43px;
-          background-position-x: -50px;
-        }
-
-        .sell_reward {
-          width: 63px;
-          background-position-x: -235px;
-        }
-
-        .sale {
-          width: 26px;
-          background-position-x: -103px;
-        }
-      }
-    }
-
-    .col5 {
-      max-width: 70px;
-      width: calc(100% - 93.5184%);
-      color: #767676;
-      line-height: 60px;
-    }
+    text-align: center;
 
     @media (max-width: 1080px) {
       >* {
@@ -390,25 +259,25 @@
       }
 
       .col2 {
-        float: none;
-        width: 100%;
         position: absolute;
         top: 40px;
+        float: none;
+        width: 100%;
 
         .up_text {
-          text-align: center;
-          width: 25%;
           float: left;
+          width: 25%;
+          text-align: center;
         }
 
         .dn_text {
-          width: 75%;
           float: left;
+          width: 75%;
         }
 
         .icon_detail {
-          left: 50% !important;
           top: 0 !important;
+          left: 50% !important;
         }
       }
 
@@ -450,6 +319,135 @@
         display: none;
       }
     }
+
+    &:hover {
+      background-color: #e3f4fe;
+
+      .col2 .icon_detail {
+        display: block;
+      }
+    }
+
+    >* {
+      float: left;
+      height: 100%;
+    }
+
+    .col1 {
+      width: 11.1111%;
+      max-width: 120px;
+      cursor: pointer;
+
+      span {
+        display: inline-block;
+        width: 100%;
+        line-height: 60px;
+        word-break: break-all;
+      }
+    }
+
+    .col2 {
+      position: relative;
+      width: 44.4444%;
+      max-width: 480px;
+      padding: 15px 5px;
+      text-align: left;
+
+      >* {
+        cursor: pointer;
+      }
+
+      .up_text {
+        margin-bottom: 5px;
+      }
+
+      .icon_detail {
+        position: absolute;
+        top: 14px;
+        right: 10px;
+        display: none;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        background: url("../images/sp_list.png") no-repeat -2px -135px;
+      }
+    }
+
+    .col3 {
+      width: 12.9629%;
+      max-width: 140px;
+      padding-right: 5px;
+      text-align: right;
+
+      span {
+        display: block;
+        line-height: 40px;
+      }
+
+      span+span {
+        line-height: 0px;
+      }
+
+      .unit_money {
+        color: #767676;
+      }
+
+      .min_money {
+        font-weight: bold;
+        color: #216ed7;
+      }
+    }
+
+    .col4 {
+      width: 25%;
+      max-width: 270px;
+
+      .icon_wrap {
+        width: 100%;
+        height: 100%;
+
+        i {
+          display: inline-block;
+          height: 41px;
+          margin-top: 9px;
+          margin-right: 10px;
+          background-image: url(../images/sp_list.png);
+          background-repeat: no-repeat;
+          background-position-y: -53px;
+
+          &.active {
+            background-position-y: -2px;
+          }
+        }
+
+        .cert {
+          width: 38px;
+          background-position-x: -2px;
+        }
+
+        .reward {
+          width: 43px;
+          background-position-x: -50px;
+        }
+
+        .sell_reward {
+          width: 63px;
+          background-position-x: -235px;
+        }
+
+        .sale {
+          width: 26px;
+          background-position-x: -103px;
+        }
+      }
+    }
+
+    .col5 {
+      width: calc(100% - 93.5184%);
+      max-width: 70px;
+      line-height: 60px;
+      color: #767676;
+    }
   }
 }
 
@@ -467,47 +465,47 @@
   right: 0;
   width: 73px;
   height: 27px;
-  background: url("../images/btn_quick.gif");
   cursor: pointer;
+  background: url("../images/btn_quick.gif");
 }
 
 .to_top {
-  margin-top: 0;
   width: 43px;
   height: 43px;
-  background-color: #0475EA;
+  padding: 6px 0;
+  margin-top: 0;
+  font-size: 14px;
+  letter-spacing: -1px;
   color: #fff;
   text-align: center;
-  font-size: 14px;
-  padding: 6px 0;
   cursor: pointer;
-  letter-spacing: -1px;
+  background-color: #0475EA;
 
   /* 화살표 */
   .arrow_icon {
-    height: .9em;
-    display: block;
     position: relative;
-    border-radius: 4px;
+    display: block;
+    height: .9em;
     padding-top: 3px;
     margin-top: 3px;
+    border-radius: 4px;
 
     .left_bar {
       position: absolute;
       left: 17px;
       height: 5px;
+      border-radius: 2px;
       transform: rotate(45deg);
       -ms-transform: rotate(45deg);
-      border-radius: 2px;
 
       &:after {
-        content: '';
-        background-color: #fff;
-        width: 12px;
-        height: 1px;
         display: block;
         float: right;
+        width: 12px;
+        height: 1px;
+        background-color: #fff;
         border-radius: 6px 10px 10px 6px;
+        content: '';
       }
     }
 
@@ -519,13 +517,13 @@
       -ms-transform: rotate(-45deg);
 
       &:after {
-        content: '';
-        background-color: #fff;
-        width: 12px;
-        height: 1px;
         display: block;
         float: right;
+        width: 12px;
+        height: 1px;
+        background-color: #fff;
         border-radius: 10px 6px 6px 10px;
+        content: '';
       }
     }
   }
@@ -535,19 +533,19 @@
     사이드 바
 *********************/
 .side_list {
-  width: 43px;
-  height: 148px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  width: 43px;
+  height: 148px;
   background: #919199;
+  transform: translate(-50%, -50%);
 
   .side_item {
     position: relative;
+    width: 43px;
     border: 1px solid #a4a4a4;
     border-right: none;
-    width: 43px;
 
     &:nth-child(1) {
       height: 55px;
@@ -561,9 +559,9 @@
     .icon {
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
       bottom: 0;
+      left: 0;
       margin: auto;
       text-align: center;
 
@@ -575,33 +573,33 @@
     }
 
     p {
-      width: 88px;
-      height: 28px;
-      letter-spacing: -1px;
-      background: #fff;
-      visibility: hidden;
-      font-size: 13px;
-      text-align: center;
-      color: #767676;
-      padding: 6px 5px;
       position: relative;
       left: -90px;
       z-index: 1;
+      width: 88px;
+      height: 28px;
+      padding: 6px 5px;
+      font-size: 13px;
+      letter-spacing: -1px;
+      color: #767676;
+      text-align: center;
+      background: #fff;
       border: 1px solid #E0E0E0;
+      visibility: hidden;
 
       &::after {
-        content: '';
-        display: block;
         position: absolute;
+        top: 50%;
+        right: -10px;
+        left: auto;
         z-index: 10;
+        display: block;
+        margin-top: -7px;
         border: 0;
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
-        margin-top: -7px;
-        top: 50%;
         border-left: 12px solid #fff;
-        left: auto;
-        right: -10px;
+        content: '';
       }
     }
   }
@@ -613,44 +611,44 @@
 .trade_title {
   width: 100%;
   height: 35px;
-  margin-bottom: 20px;
   padding-bottom: 3px;
+  margin-bottom: 20px;
   border-bottom: 2px solid #159efd;
 
   >span {
+    margin-right: 15px;
     font-size: 20px;
     font-weight: 700;
+    line-height: 30px;
     letter-spacing: -2px;
     color: #159efd;
-    line-height: 30px;
-    margin-right: 15px;
   }
 }
 
 #server_name {
-  font-size: 15px;
-  letter-spacing: -1px;
-  font-weight: 700;
-  vertical-align: middle;
-  color: #1d1d1d;
   padding-top: 4px;
   margin-right: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #1d1d1d;
+  vertical-align: middle;
 }
 
 #trade_reg {
   float: right;
   width: 98px;
   height: 30px;
-  background: #159EFD;
-  border-radius: 15px;
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: -2px;
-  line-height: 28px;
-  text-align: center;
   font-weight: bold;
+  line-height: 28px;
+  letter-spacing: -2px;
   color: #fff;
+  text-align: center;
   cursor: pointer;
+  background: #159EFD;
+  border-radius: 15px;
 }
 
 /*********************
@@ -660,10 +658,24 @@
   height: 40px;
   border-bottom: 1px solid #e1e1e1;
 
+  @media (max-width: 600px) {
+    .select_list {
+      width: 80%;
+    }
+
+    .select_search {
+      width: 20%;
+
+      #trade_search {
+        display: none;
+      }
+    }
+  }
+
   &:after {
-    content: '';
-    clear: both;
     display: block;
+    clear: both;
+    content: '';
   }
 
   .select_list {
@@ -672,24 +684,24 @@
     height: 100%;
 
     &:after {
-      content: '';
-      clear: both;
       display: block;
+      clear: both;
+      content: '';
     }
 
     .select_item {
       float: left;
-      font-size: 13px;
-      max-width: 183px;
       width: 33.3333%;
-      text-align: center;
-      color: #1d1d1d;
-      background: #f1f0f3;
       height: 100%;
+      max-width: 183px;
+      font-size: 13px;
       line-height: 38px;
+      color: #1d1d1d;
+      text-align: center;
+      cursor: pointer;
+      background: #f1f0f3;
       border-top: 1px solid #e1e1e1;
       border-right: 1px solid #e1e1e1;
-      cursor: pointer;
 
       &:first-child {
         border-left: 1px solid #e1e1e1;
@@ -707,35 +719,21 @@
     float: right;
     width: 234px;
     height: 29px;
+    padding: 0 5px;
     border: 1px solid #d7d7d7;
     border-right: 0;
-    padding: 0 5px;
   }
 
   .search_btn {
+    display: block;
     float: right;
     width: 34px;
     height: 29px;
-    display: block;
-    box-sizing: content-box;
-    border: 1px solid #d7d7d7;
-    background-position: -44px -135px;
-    background-image: url(../images/sp_list.png);
     cursor: pointer;
-  }
-
-  @media (max-width: 600px) {
-    .select_list {
-      width: 80%;
-    }
-
-    .select_search {
-      width: 20%;
-
-      #trade_search {
-        display: none;
-      }
-    }
+    background-image: url(../images/sp_list.png);
+    background-position: -44px -135px;
+    border: 1px solid #d7d7d7;
+    box-sizing: content-box;
   }
 }
 
@@ -752,26 +750,26 @@
     width: 131px;
     height: 29px;
     font-size: 12px;
-    line-height: 27px;
-    border: 1px solid #e0e0e0;
-    cursor: pointer;
-    text-align: center;
     font-weight: normal;
+    line-height: 27px;
     letter-spacing: -1px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
 
     &:after {
       margin-right: 5px;
-      content: "〉〉〉";
       font-weight: bold;
       letter-spacing: -5.5px;
       color: #159efd;
+      content: "〉〉〉";
     }
   }
 
   >.item {
     margin-bottom: 5px;
-    border: 1px solid #c3daea;
     background: #F0F8FD;
+    border: 1px solid #c3daea;
 
     @media (max-width: 780px) {
       // .col2 { border-right: 1px solid #c3daea;}
@@ -796,13 +794,13 @@
   }
 
   .col1:before {
-    width: 44px;
-    height: 34px;
     position: absolute;
     top: 0;
     left: 0;
-    content: '';
+    width: 44px;
+    height: 34px;
     background-image: url(../images/img_pre_tab.png);
+    content: '';
   }
 }
 
@@ -811,9 +809,9 @@
 *********************/
 .basic {
   &:after {
-    content: '';
     display: block;
     clear: both;
+    content: '';
   }
 
   &_filter {
@@ -822,9 +820,9 @@
     margin-left: 7px;
 
     &:after {
-      content: '';
       display: block;
       clear: both;
+      content: '';
     }
 
     .filter_item {
@@ -833,8 +831,8 @@
       height: 15px;
       margin-left: 15px;
       font-size: 11px;
-      color: #9f9f9f;
       line-height: 25px;
+      color: #9f9f9f;
       cursor: pointer;
 
       @media (max-width: 450px) {
@@ -842,10 +840,10 @@
       }
 
       &:before {
-        content: '';
+        display: inline-block;
         width: 10px;
         height: 9px;
-        display: inline-block;
+        content: '';
       }
 
       &:last-child {
@@ -872,17 +870,17 @@
     width: 14px;
     height: 14px;
     margin-right: 10px;
-    background: url("../images/sp_list.png") no-repeat -238px -104px;
     cursor: pointer;
+    background: url("../images/sp_list.png") no-repeat -238px -104px;
   }
 
   .trade_info {
+    display: block;
     float: left;
     width: 66px;
     font-size: 12px;
-    color: #2f2f2f;
     font-weight: normal;
-    display: block;
+    color: #2f2f2f;
   }
 
   .icon_hook {
@@ -890,8 +888,8 @@
     width: 14px;
     height: 14px;
     margin: 0 10px 0 5px;
-    background: url("../images/sp_list.png") no-repeat -214px -104px;
     cursor: pointer;
+    background: url("../images/sp_list.png") no-repeat -214px -104px;
   }
 }
 
@@ -903,8 +901,8 @@
   >.item {
     height: 100%;
     line-height: 38px;
-    text-align: center;
     color: #1D1D1D;
+    text-align: center;
 
     >* {
       background-color: #e3e3e3;
@@ -942,28 +940,28 @@
   }
 
   .trade_info_detail {
-    display: none;
     position: absolute;
     top: 18px;
     right: -5px;
+    z-index: 1;
+    display: none;
+    width: 364px;
+    height: 200px;
+    padding: 12px 15px 0;
+    color: #636363;
+    background: #fff;
+    border: 1px solid #707070;
+
+    box-sizing: border-box;
 
     @media (max-width: 600px) {
       right: -35px;
     }
 
-    box-sizing: border-box;
-    width: 364px;
-    height: 200px;
-    padding: 12px 15px 0;
-    border: 1px solid #707070;
-    background: #fff;
-    z-index: 1;
-    color: #636363;
-
     p {
-      font-weight: bold;
-      font-size: 12px;
       margin-bottom: 15px;
+      font-size: 12px;
+      font-weight: bold;
     }
 
     .detail_close {
@@ -979,38 +977,38 @@
 }
 
 .detail_list {
-  font-weight: normal;
   font-size: 11px;
+  font-weight: normal;
 
   .detail_item {
-    margin-bottom: 5px;
-    height: 32px;
     width: 332px;
+    height: 32px;
+    margin-bottom: 5px;
     line-height: 30px;
     letter-spacing: -1px;
 
     span {
-      border: 1px solid #CFCFCF;
       display: inline-block;
       width: 103px;
       height: 32px;
-      background-color: #f7f7f7;
-      border-radius: 3px;
-      text-align: center;
-      line-height: 30px;
       margin-right: 10px;
       font-size: 11px;
       font-weight: normal;
+      line-height: 30px;
+      text-align: center;
+      background-color: #f7f7f7;
+      border: 1px solid #CFCFCF;
+      border-radius: 3px;
 
       i {
         display: inline-block;
-        line-height: 30px;
         height: 21px;
-        background-image: url(../images/sp_list.png);
-        background-position-y: -104px;
-        vertical-align: middle;
         margin-top: -3px;
         margin-right: 5px;
+        line-height: 30px;
+        vertical-align: middle;
+        background-image: url(../images/sp_list.png);
+        background-position-y: -104px;
       }
     }
 
@@ -1037,21 +1035,21 @@
 }
 
 .more_load {
-  margin: 0 auto;
   width: 100%;
   height: 48px;
+  margin: 0 auto;
   margin-top: 20px;
-  border: 1px solid #e0e0e0;
   font-size: 14px;
+  line-height: 46px;
   text-align: center;
   cursor: pointer;
-  line-height: 46px;
+  border: 1px solid #e0e0e0;
 }
  
 .top {
+  position: relative;
   width: 100%;
   height: 14px;
-  position: relative;
   margin-top: 20px;
   margin-bottom: 40px;
 
@@ -1065,13 +1063,13 @@
     footer
 *********************/
 .footer {
-  background: #616161;
   color: #e1e1e1;
+  background: #616161;
 
   &_link {
     padding: 0 10px;
-    line-height: 43px;
     font-size: 13px;
+    line-height: 43px;
     letter-spacing: 0;
 
     .link_list {
@@ -1095,10 +1093,10 @@
 
     .sns_logo {
       .sns {
+        cursor: pointer;
         background-image: url(../images/sp_renew_20210804.png);
         background-repeat: no-repeat;
         background-position-x: -802px;
-        cursor: pointer;
       }
 
       .facebook {
@@ -1134,8 +1132,8 @@
 
       .copy {
         display: block;
-        text-align: left;
         width: 84%;
+        text-align: left;
         word-break: keep-all;
       }
 
