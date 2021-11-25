@@ -19,79 +19,6 @@
   @media (max-width: 1196px) {
     display: none;
   }
-
-  .side_list {
-    width: 43px;
-    height: 148px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #919199;
-
-    .side_item {
-      position: relative;
-      border: 1px solid #a4a4a4;
-      border-right: none;
-      width: 43px;
-
-      &:nth-child(1) {
-        height: 55px;
-      }
-
-      &:nth-child(2) {
-        height: 50px;
-        border-top: 0;
-      }
-
-      .icon {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        text-align: center;
-
-        &:hover {
-          p {
-            visibility: visible;
-          }
-        }
-      }
-
-      p {
-        width: 88px;
-        height: 28px;
-        letter-spacing: -1px;
-        background: #fff;
-        visibility: hidden;
-        font-size: 13px;
-        text-align: center;
-        color: #767676;
-        padding: 6px 5px;
-        position: relative;
-        left: -90px;
-        z-index: 1;
-        border: 1px solid #E0E0E0;
-
-        &::after {
-          content: '';
-          display: block;
-          position: absolute;
-          z-index: 10;
-          border: 0;
-          border-top: 5px solid transparent;
-          border-bottom: 5px solid transparent;
-          margin-top: -7px;
-          top: 50%;
-          border-left: 12px solid #fff;
-          left: auto;
-          right: -10px;
-        }
-      }
-    }
-  }
 }
 
 .center {
@@ -111,260 +38,9 @@
   }
 }
 
-.trade_title {
-  width: 100%;
-  height: 35px;
-  margin-bottom: 20px;
-  padding-bottom: 3px;
-}
-
-.trade_select {
-  height: 40px;
-
-  &:after {
-    content: '';
-    clear: both;
-    display: block;
-  }
-
-  .select_list {
-    float: left;
-    height: 100%;
-
-    &:after {
-      content: '';
-      clear: both;
-      display: block;
-    }
-
-    .select_item {
-      float: left;
-      font-size: 13px;
-    }
-  }
-
-  .select_search {
-    float: right;
-    font-size: 13px;
-  }
-}
-
-.subtitle {
-  height: 46px;
-  margin-top: 15px;
-  padding: 11px 0 8px;
-
-  &:after {
-    content: '';
-    clear: both;
-    display: block;
-  }
-
-  span {
-    float: left;
-  }
-
-  .premium_regInfo {
-    float: right;
-  }
-
-  .basic_filter {
-    &:after {
-      content: '';
-      clear: both;
-      display: block;
-    }
-
-    .filter_item {
-      float: left;
-    }
-  }
-
-  .basic_refresh {
-    float: right;
-  }
-
-  .trade_info {
-    float: right;
-  }
-}
-
 .list {
   max-width: 1080px;
   width: 100%;
-  overflow: hidden;
-
-  &:after {
-    content: '';
-    clear: both;
-    display: block;
-  }
-}
-
-.item {
-  height: 60px;
-  display: block;
-  max-width: 1080px;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 13px;
-  letter-spacing: -1px;
-
-  >* {
-    float: left;
-    height: 100%;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  /* TEST */
-  // .col1 { background-color: rgb(200, 100, 100) !important; }
-  // .col2 { background-color: rgb(200, 200, 100) !important; }
-  // .col3 { background-color: rgb(100, 200, 100) !important; }
-  // .col4 { background-color: rgb(100, 100, 200) !important; }
-  // .col5 { background-color: rgb(200, 100, 200) !important; }
-  // * { color: #000 !important;}
-
-  @media (max-width: 1080px) {
-    >* {
-      max-width: none !important;
-    }
-
-    .col1 {
-      width: 10%;
-    }
-
-    .col2 {
-      width: 45%;
-    }
-
-    .col3 {
-      width: 16%;
-    }
-
-    .col4 {
-      width: 29%;
-    }
-
-    .col5 {
-      display: none;
-    }
-  }
-
-  @media (max-width: 860px) {
-    height: 80px;
-
-    >* {
-      height: 40px !important;
-      line-height: 1;
-      text-align: center;
-    }
-
-    .col1 {
-      width: 30%;
-      line-height: 40px;
-
-    }
-
-    .col2 {
-      float: none;
-      width: 100%;
-      position: absolute;
-      top: 40px;
-
-      .up_text {
-        text-align: center;
-        width: 25%;
-        float: left;
-      }
-
-      .dn_text {
-        width: 75%;
-        float: left;
-      }
-
-      .icon_detail {
-        left: 50% !important;
-        top: 0 !important;
-      }
-    }
-
-    .col3 {
-      width: 30%;
-
-      span {
-        line-height: 20px !important;
-      }
-
-      span+span {
-        line-height: 1;
-      }
-    }
-
-    .col4 {
-      width: 40%;
-
-      .icon_wrap i {
-        margin-top: 3px !important;
-        margin-right: 5px !important;
-      }
-    }
-
-    .col5 {
-      display: none;
-    }
-  }
-
-  @media (max-width: 510px) {
-    .col2 {}
-
-    .col4 {}
-  }
-}
-
-.col1 {
-  max-width: 120px;
-  width: 11.1111%;
-}
-
-.col2 {
-  position: relative;
-  max-width: 480px;
-  width: 44.4444%;
-}
-
-.col3 {
-  max-width: 140px;
-  width: 12.9629%;
-}
-
-.col4 {
-  max-width: 270px;
-  width: 25%;
-}
-
-.col5 {
-  max-width: 70px;
-  width: calc(100% - 93.5184%);
-}
-
-.more_load {
-  margin: 0 auto;
-  width: 100%;
-  height: 48px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.top {
-  width: 100%;
-  height: 14px;
-  position: relative;
-  margin-top: 20px;
-  margin-bottom: 40px;
 }
 
 .footer {
@@ -373,30 +49,7 @@
   @media (max-width: 1040px) {
     height: 200px;
 
-    .footer_link {
-      padding: 0 10px;
-
-      .link_list .link_item {
-        margin-right: 5px;
-      }
-    }
-
-    .footer_info {
-      padding: 0 10px;
-      margin-top: 20px;
-
-      .footer_logo {
-        display: block;
-        margin: 0 auto;
-      }
-
-      .copy {
-        display: block;
-        text-align: left;
-        width: 84%;
-        word-break: keep-all;
-      }
-    }
+    .footer_info {}
   }
 
   @media (max-width: 900px) {
@@ -535,7 +188,18 @@
 }
 
 .subtitle {
+  height: 46px;
+  margin-top: 15px;
+  padding: 11px 0 8px;
+
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
   span {
+    float: left;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: -1px;
@@ -546,6 +210,14 @@
 .list {
   .item {
     position: relative;
+    height: 60px;
+    display: block;
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: -1px;
 
     &:hover {
       background-color: #e3f4fe;
@@ -555,24 +227,28 @@
       }
     }
 
+    >* {
+      float: left;
+      height: 100%;
+    }
+
     .col1 {
+      max-width: 120px;
+      width: 11.1111%;
       cursor: pointer;
 
-      // 여기에 텍스트 수직정렬할 방법 추가 필요.
-      // 텍스트는 여러줄이 되어도 떨어지면 안됨.
-      // 아예 새로운 태그로 감싸는 방향으로 제작해보기.
       span {
-        // background-color: #000;
         width: 100%;
-        // height: 100%;
         line-height: 60px;
         display: inline-block;
-        vertical-align: middle;
         word-break: break-all;
       }
     }
 
     .col2 {
+      position: relative;
+      max-width: 480px;
+      width: 44.4444%;
       padding: 15px 5px;
       text-align: left;
 
@@ -597,6 +273,8 @@
     }
 
     .col3 {
+      max-width: 140px;
+      width: 12.9629%;
       text-align: right;
       padding-right: 5px;
 
@@ -620,6 +298,9 @@
     }
 
     .col4 {
+      max-width: 270px;
+      width: 25%;
+
       .icon_wrap {
         width: 100%;
         height: 100%;
@@ -661,8 +342,113 @@
     }
 
     .col5 {
+      max-width: 70px;
+      width: calc(100% - 93.5184%);
       color: #767676;
       line-height: 60px;
+    }
+
+    @media (max-width: 1080px) {
+      >* {
+        max-width: none !important;
+      }
+
+      .col1 {
+        width: 10%;
+      }
+
+      .col2 {
+        width: 45%;
+      }
+
+      .col3 {
+        width: 16%;
+      }
+
+      .col4 {
+        width: 29%;
+      }
+
+      .col5 {
+        display: none;
+      }
+    }
+
+    @media (max-width: 860px) {
+      height: 80px;
+
+      >* {
+        height: 40px !important;
+        line-height: 1;
+        text-align: center;
+      }
+
+      .col1 {
+        width: 30%;
+        line-height: 40px;
+
+      }
+
+      .col2 {
+        float: none;
+        width: 100%;
+        position: absolute;
+        top: 40px;
+
+        .up_text {
+          text-align: center;
+          width: 25%;
+          float: left;
+        }
+
+        .dn_text {
+          width: 75%;
+          float: left;
+        }
+
+        .icon_detail {
+          left: 50% !important;
+          top: 0 !important;
+        }
+      }
+
+      .col3 {
+        width: 30%;
+
+        span {
+          line-height: 20px !important;
+        }
+
+        span+span {
+          line-height: 1;
+        }
+      }
+
+      .col4 {
+        width: 40%;
+
+        .icon_wrap i {
+          margin-top: 3px !important;
+          margin-right: 5px !important;
+        }
+      }
+
+      .col5 {
+        display: none;
+      }
+    }
+
+    @media (max-width: 510px) {
+
+      // .col1 { line-height: 10p}
+      .col1,
+      .col2 {
+        width: 50%;
+      }
+
+      .col4 {
+        display: none;
+      }
     }
   }
 }
@@ -746,9 +532,89 @@
 }
 
 /*********************
+    사이드 바
+*********************/
+.side_list {
+  width: 43px;
+  height: 148px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #919199;
+
+  .side_item {
+    position: relative;
+    border: 1px solid #a4a4a4;
+    border-right: none;
+    width: 43px;
+
+    &:nth-child(1) {
+      height: 55px;
+    }
+
+    &:nth-child(2) {
+      height: 50px;
+      border-top: 0;
+    }
+
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      text-align: center;
+
+      &:hover {
+        p {
+          visibility: visible;
+        }
+      }
+    }
+
+    p {
+      width: 88px;
+      height: 28px;
+      letter-spacing: -1px;
+      background: #fff;
+      visibility: hidden;
+      font-size: 13px;
+      text-align: center;
+      color: #767676;
+      padding: 6px 5px;
+      position: relative;
+      left: -90px;
+      z-index: 1;
+      border: 1px solid #E0E0E0;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 10;
+        border: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        margin-top: -7px;
+        top: 50%;
+        border-left: 12px solid #fff;
+        left: auto;
+        right: -10px;
+      }
+    }
+  }
+}
+
+/*********************
     거래 타이틀
 *********************/
 .trade_title {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 20px;
+  padding-bottom: 3px;
   border-bottom: 2px solid #159efd;
 
   >span {
@@ -791,6 +657,7 @@
     거래 선택
 *********************/
 .trade_select {
+  height: 40px;
   border-bottom: 1px solid #e1e1e1;
 
   &:after {
@@ -802,9 +669,17 @@
   .select_list {
     float: left;
     width: 50%;
+    height: 100%;
+
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
 
     .select_item {
       float: left;
+      font-size: 13px;
       max-width: 183px;
       width: 33.3333%;
       text-align: center;
@@ -825,6 +700,7 @@
   .select_search {
     float: left;
     width: 50%;
+    font-size: 13px;
   }
 
   #trade_search {
@@ -953,7 +829,6 @@
 
     .filter_item {
       display: inline-block;
-      vertical-align: bottom;
       width: 33px;
       height: 15px;
       margin-left: 15px;
@@ -1162,16 +1037,28 @@
 }
 
 .more_load {
+  margin: 0 auto;
+  width: 100%;
+  height: 48px;
+  margin-top: 20px;
   border: 1px solid #e0e0e0;
   font-size: 14px;
   text-align: center;
   cursor: pointer;
   line-height: 46px;
 }
+ 
+.top {
+  width: 100%;
+  height: 14px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 40px;
 
-.top img {
-  float: right;
-  cursor: pointer;
+  img {
+    float: right;
+    cursor: pointer;
+  }
 }
 
 /*********************
@@ -1182,12 +1069,15 @@
   color: #e1e1e1;
 
   &_link {
+    padding: 0 10px;
     line-height: 43px;
     font-size: 13px;
     letter-spacing: 0;
 
     .link_list {
       .link_item {
+        margin-right: 5px;
+
         &:nth-child(3) {
           font-weight: bold;
           color: #feffcf;
@@ -1227,21 +1117,37 @@
 
   &_info {
     position: relative;
+    padding: 0 10px;
+    margin-top: 20px;
     font-size: 12px;
     color: #b0b0b0;
-  }
 
-  .inipay {
-    position: absolute;
-    top: 23px;
-    right: 30px;
-    width: 54px;
-    height: 54px;
+    .footer_logo {
+      display: block;
+      margin: 0 auto;
 
-    img {
-      width: 54px;
-      height: 54px;
-      cursor: pointer;
+      img {
+        width: 54px;
+        height: 54px;
+        cursor: pointer;
+      }
+
+      .copy {
+        display: block;
+        text-align: left;
+        width: 84%;
+        word-break: keep-all;
+      }
+
+      .inipay {
+        position: absolute;
+        top: 23px;
+        right: 30px;
+        width: 54px;
+        height: 54px;
+      }
     }
+
   }
+
 }
