@@ -15,7 +15,9 @@
   width: 43px;
   height: 100%;
 
-  @media (max-width: 1196px) { display: none;}
+  @media (max-width: 1196px) {
+    display: none;
+  }
 }
 
 .center {
@@ -925,6 +927,7 @@
 .footer {
   color: #e1e1e1;
   background: #616161;
+
   @media (max-width: 580px) {
     height: 350px;
 
@@ -1012,9 +1015,17 @@
         background-position-x: -802px;
       }
 
-      .facebook { background-position-y: -2px;}
-      .instagram { background-position-y: -26px;}
-      .youtube { background-position-y: -50px;}
+      .facebook {
+        background-position-y: -2px;
+      }
+
+      .instagram {
+        background-position-y: -26px;
+      }
+
+      .youtube {
+        background-position-y: -50px;
+      }
     }
   }
 
@@ -1032,6 +1043,12 @@
     font-size: 12px;
     color: #b0b0b0;
 
+    &:after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+
     .footer_logo {
       display: inline-block;
       width: 104px;
@@ -1042,33 +1059,35 @@
       img {
         cursor: pointer;
       }
+    }
 
-      .copy {
+    .copy {
+      display: inline-block;
+      width: 74%;
+      height: 50%;
+      margin-left: 40px;
+      line-height: 18px;
+      letter-spacing: -1px;
+      text-align: left;
+      word-break: break-all;
+      vertical-align: middle;
+
+      span {
         display: inline-block;
-        width: 84%;
-        margin-left: 40px;
-        line-height: 18px;
-        text-align: left;
-        word-break: break-all;
-        vertical-align: middle;
-
-        span {
-          display: inline-block;
-        }
       }
 
       address {
         display: inline-block;
         font-style: normal;
       }
+    }
 
-      .iniPay {
-        position: absolute;
-        top: 23px;
-        right: 30px;
-        width: 54px;
-        height: 54px;
-      }
+    .iniPay {
+      position: absolute;
+      top: 23px;
+      right: 30px;
+      width: 54px;
+      height: 54px;
     }
   }
 }
